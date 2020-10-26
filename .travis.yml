@@ -1,9 +1,10 @@
 sudo: required
+language: generic 
 services:
   -docker
 before install:
   -docker build -t maleckicoa/docker-react -f Dockerfile.dev .
 
 script:
-  -docker run  maleckicoa/docker-react npm run test -- --coverage
-# - docker run -e CI=true USERNAME/docker-react npm run test
+#  -docker run  maleckicoa/docker-react npm run test -- --coverage
+ - docker run -e CI=true maleckicoa/docker-react npm run test
