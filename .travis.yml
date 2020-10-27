@@ -1,3 +1,4 @@
+
 sudo: required
 language: generic
 
@@ -12,12 +13,12 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-west"
-  app: "docker-react"
-  env: "	DockerReact-env" # starting up elasticbeanstock creates an environment
-  bucket_name: "elasticbeanstalk-us-west-2-026803142645" # same s3 bucket is reused for all elasticbeanstock environments
-  bucket_path: "docker-react" # specify the folder inside s3 bucket for this specific environment
+  region: 'us-west-2'
+  app: 'docker-react'
+  env: 'DockerReact-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-026803142645'
+  bucket_path: 'docker-react'
   on:
-    branch: master # deployment only when new commit to master branch
-  access_key_id: $AWS_ELASTICBEANSTALK_ACCESS_KEY
-  secret_access_key: $AWS_ELASTICBEANSTALK_SECRET_KEY
+    branch: master
+  access_key_id:  $AWS_ELASTICBEANSTALK_ACESS_KEY
+  secret_access_key:  $AWS_ELASTICBEANSTALK_SECRET_KEY
