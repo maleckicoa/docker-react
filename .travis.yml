@@ -18,6 +18,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-026803142645" # same s3 bucket is reused for all elasticbeanstock environments
   bucket_path: "docker-react" # specify the folder inside s3 bucket for this specific environment
   on:
-    branch:master # deployment only when new commit to master branch
+    branch: master # deployment only when new commit to master branch
   access_key_id: $AWS_ELASTICBEANSTALK_ACCESS_KEY
   secret_access_key: $AWS_ELASTICBEANSTALK_SECRET_KEY
